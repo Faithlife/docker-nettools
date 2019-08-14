@@ -1,4 +1,4 @@
-FROM alpine:3.8
+FROM alpine:3.9
 
 RUN apk add --no-cache \
   bash \
@@ -12,7 +12,6 @@ RUN apk add --no-cache \
   openssl \
   python2
 
-RUN mkdir /opt
 RUN curl -sSLo /tmp/google-cloud-sdk.tar.gz https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-234.0.0-linux-x86_64.tar.gz && \
   echo "82ed3996e31b8cfa5ac4f39063234ecbbdd14e533d4f513d2d9a525da801bd7f  /tmp/google-cloud-sdk.tar.gz" | sha256sum -c - && \
   tar zxf /tmp/google-cloud-sdk.tar.gz -C /opt && \
