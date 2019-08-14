@@ -27,7 +27,8 @@ RUN curl -sSLo /usr/local/bin/gdrive "https://docs.google.com/uc?id=0B3X9GlR6Emb
   echo "f31b441c5cdb835ee69849a62856e35c17954fd5b600f6de8a6f5d7bd7bf0420  /usr/local/bin/gdrive" | sha256sum -c - && \
   chmod +x /usr/local/bin/gdrive
 
-RUN curl -sSLo /usr/local/bin/speedtest-cli https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py && \
+RUN curl -sSLo /usr/local/bin/speedtest-cli https://raw.githubusercontent.com/sivel/speedtest-cli/v2.1.1/speedtest.py && \
+  echo "78167ef0ccb4cc7b33c7314da395c7740a91e5f7f4e0d761c48039891f943b47  /usr/local/bin/speedtest-cli" | sha256sum -c - && \
   chmod +x /usr/local/bin/speedtest-cli
 
 CMD ["/bin/bash", "--login"]
