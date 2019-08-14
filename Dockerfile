@@ -12,8 +12,8 @@ RUN apk add --no-cache \
   openssl \
   python2
 
-RUN curl -sSLo /tmp/google-cloud-sdk.tar.gz https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-234.0.0-linux-x86_64.tar.gz && \
-  echo "82ed3996e31b8cfa5ac4f39063234ecbbdd14e533d4f513d2d9a525da801bd7f  /tmp/google-cloud-sdk.tar.gz" | sha256sum -c - && \
+RUN curl -sSLo /tmp/google-cloud-sdk.tar.gz https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-258.0.0-linux-x86_64.tar.gz && \
+  echo "7bb5701cb0107e59b3a3e2318252dc416722ac7c0d70fea84ba5fe92f7acd43f  /tmp/google-cloud-sdk.tar.gz" | sha256sum -c - && \
   tar zxf /tmp/google-cloud-sdk.tar.gz -C /opt && \
   rm /tmp/google-cloud-sdk.tar.gz
 RUN /opt/google-cloud-sdk/install.sh \
