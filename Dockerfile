@@ -21,3 +21,7 @@ RUN echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] http://packages.c
   apt-get update -y && \
   apt-get install google-cloud-cli -y && \
   rm -rf /var/lib/apt/lists/*
+
+RUN curl -s https://packagecloud.io/install/repositories/ookla/speedtest-cli/script.deb.sh | bash && \
+  apt-get install -y speedtest-cli && \
+  rm -rf /var/lib/apt/lists/*
