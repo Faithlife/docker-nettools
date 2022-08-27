@@ -8,6 +8,7 @@ RUN apt-get update -y && \
     dnsutils \
     file \
     gnupg \
+    htop \
     iperf \
     iputils-ping \
     less \
