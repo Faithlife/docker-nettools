@@ -10,6 +10,7 @@ RUN apt-get update -y && \
     gnupg \
     htop \
     iperf \
+    iproute2 \
     iputils-ping \
     less \
     netcat-openbsd \
